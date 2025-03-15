@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace ClasesAbstract
 {
-    internal class EmpleadoTiempoCompleto
+    internal class EmpleadoTiempoCompleto : Empleado
     {
+        private int bono;
+        private DateTime horaInicio;
+        private DateTime horasalida;
+        public EmpleadoTiempoCompleto(string nombre, string apellido, Cargo cargo, short identificacion, string departamento, double salarioBase, string eps, string fondoDePensiones, int bono, DateTime horaInicio, DateTime horasalida) : base(nombre, apellido, cargo, identificacion, departamento, salarioBase, eps, fondoDePensiones)
+        {
+            this.bono = bono;
+            this.horaInicio = horaInicio;
+            this.horasalida = horasalida;
+        }
+
+        public int Bono { get => bono; set => bono = value; }
+        public DateTime HoraInicio { get => horaInicio; set => horaInicio = value; }
+        public DateTime Horasalida { get => horasalida; set => horasalida = value; }
     }
 }
