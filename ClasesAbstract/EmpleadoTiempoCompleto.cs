@@ -21,5 +21,12 @@ namespace ClasesAbstract
         public int Bono { get => bono; set => bono = value; }
         public DateTime HoraInicio { get => horaInicio; set => horaInicio = value; }
         public DateTime Horasalida { get => horasalida; set => horasalida = value; }
-    }
+
+        public override double calcularSalario()
+        {
+            double salario = this.SalarioBase - (this.SalarioBase * (PORCENTAJE_EPS + PORCENTAJE_PENSION));
+            salario += bono;
+
+            return salario;
+        }
 }

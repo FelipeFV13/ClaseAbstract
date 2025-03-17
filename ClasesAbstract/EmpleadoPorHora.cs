@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClasesAbstract
 {
-    internal class EmpleadoPorHora : Empleado
+    public class EmpleadoPorHora : Empleado
     {
         private string arl;
         private double horasTrabajadas;
@@ -22,5 +22,12 @@ namespace ClasesAbstract
         public string Arl { get => arl; set => arl = value; }
         public double HorasTrabajadas { get => horasTrabajadas; set => horasTrabajadas = value; }
         public double ValorHora { get => valorHora; set => valorHora = value; }
+
+        public override double calcularSalario()
+        {
+            ValorHora = SalarioBase/ 184;
+            double salario = HorasTrabajadas * ValorHora;
+            return salario;
+        }
     }
 }
