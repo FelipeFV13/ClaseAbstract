@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasesAbstract
 {
-    internal class EmpleadoTiempoCompleto : Empleado
+    public class EmpleadoTiempoCompleto : Empleado
     {
         private int bono;
         private DateTime horaInicio;
@@ -29,4 +29,5 @@ namespace ClasesAbstract
 
             return salario;
         }
+    }
 }
